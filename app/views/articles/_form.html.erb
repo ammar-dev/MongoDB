@@ -11,7 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+    <div class="field">
+      <%= f.label :author_id %><br />
+      <%= f.collection_select :author_id, Author.all, :id, :name %>
+    </div>
+
+
+    <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
